@@ -63,24 +63,24 @@ class main_Window(customtkinter.CTk):
                 image_frame = customtkinter.CTkFrame(info_window)
                 image_frame.pack(pady=15)
                 
-                # Загружаем и отображаем изображение
+                # Load and show user image
                 try:
-                    image_path = "Images/anime-girl-playing-chess-focusing-strategy-with-thoughtful-expression_1282444-174923.avif"
+                    image_path = "First-Projects-Task-Manager-master/anime-girl-playing-chess-focusing-strategy-with-thoughtful-expression_1282444-174923.avif"
                     if os.path.exists(image_path):
-                        # Открываем изображение с PIL
+                        # Open image with PIL
                         pil_image = Image.open(image_path)
                         
                         # Изменяем размер
                         pil_image = pil_image.resize((400, 250), Image.Resampling.LANCZOS)
                         
-                        # Конвертируем для CTk
+                        # Do it for CTk
                         ct_image = customtkinter.CTkImage(
                             light_image=pil_image,
                             dark_image=pil_image,
                             size=(400, 250)
                         )
                         
-                        # Создаем метку с изображением
+                        # Make label for sort image
                         image_label = customtkinter.CTkLabel(image_frame, image=ct_image, text="")
                         image_label.pack(pady = 5)
                     else:
