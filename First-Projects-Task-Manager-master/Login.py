@@ -69,7 +69,7 @@ class Login(customtkinter.CTk):
             password_data = data["password"]
             
             #Check if its true
-            if username_data == self.create_login_window(self.username_entry) and password_data == self.create_login_window(self.password_entry):
+            if username_data == self.username_entry.get() and password_data == self.password_entry.get():
                 self.on_login_success(True)
                 messagebox.showinfo("Congrats","You logged in successful")
                 self.destroy()
