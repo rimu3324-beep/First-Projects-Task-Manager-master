@@ -55,7 +55,7 @@ class main_Window(customtkinter.CTk):
                 pass
             
             def information_window():
-                info_window = customtkinter.CTkToplevel(self)
+                info_window = customtkinter.CTkToplevel()
                 info_window.title("Information")
                 info_window.geometry("450x800")
                 info_window.resizable(False,False)
