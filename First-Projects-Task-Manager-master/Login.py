@@ -62,7 +62,7 @@ class Login(customtkinter.CTk):
         #Functions for read data
         def log_in_with_data():
             #read data.json
-            with open("First-Projects-Task-Manager-master/data.json", "r") as login_info:
+            with open("data.json", "r") as login_info:
                 data = json.load(login_info)
             
             username_data = data["username"]
@@ -92,7 +92,7 @@ class Login(customtkinter.CTk):
             }
 
             #Save data in pattern
-            with open("First-Projects-Task-Manager-master/data.json", 'w') as file_save:
+            with open("data.json", 'w') as file_save:
                 json.dump(data, file_save, indent=4)
 
 
